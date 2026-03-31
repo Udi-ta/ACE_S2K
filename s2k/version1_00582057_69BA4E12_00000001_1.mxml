@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?><MessageAssembly iib:parser="GENERICROOT" xmlns:iib="http://com.ibm.iib/lt/1.0">
+    <version xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">1</version>
+    <checkpoint>
+        <messageId xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">00582057-69BA4E12-00000001</messageId>
+        <propagationCount xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">1</propagationCount>
+        <nodeCallDepth xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">2</nodeCallDepth>
+        <timestamp xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="TIMESTAMP">2026-03-18 07:02:42.564695</timestamp>
+        <source>
+            <name xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Salesforce Request</name>
+            <identifier xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">version1#FCMComposite_1_1</identifier>
+            <type xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">ComIbmApplicationConnectorRequest</type>
+            <terminal xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">out</terminal>
+            <nodePath>
+                <application xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">s2k</application>
+                <messageFlow xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">version1</messageFlow>
+                <node xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Salesforce Request</node>
+            </nodePath>
+            <inputNode xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="BOOLEAN">FALSE</inputNode>
+        </source>
+        <target>
+            <name xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Mapping</name>
+            <identifier xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">version1#FCMComposite_1_3</identifier>
+            <type xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">ComIbmMSLMappingNode</type>
+            <terminal xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">in</terminal>
+            <nodePath>
+                <application xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">s2k</application>
+                <messageFlow xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">version1</messageFlow>
+                <node xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Mapping</node>
+            </nodePath>
+        </target>
+    </checkpoint>
+    <environment/>
+    <localEnvironment xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="MQROOT">
+        <Destination>
+            <HTTP>
+                <RequestIdentifier iib:valueType="BLOB">45564854000000000000000084f8c0ff5020580000000000</RequestIdentifier>
+            </HTTP>
+        </Destination>
+        <WrittenDestination>
+            <salesforce>
+                <object iib:valueType="CHARACTER">Account</object>
+                <action iib:valueType="CHARACTER">RETRIEVEALL</action>
+                <apiVersion iib:valueType="CHARACTER">54.0</apiVersion>
+                <endpointUrl iib:valueType="CHARACTER">https://login.salesforce.com/</endpointUrl>
+                <status-code iib:valueType="INTEGER">200</status-code>
+            </salesforce>
+        </WrittenDestination>
+    </localEnvironment>
+    <exceptionList/>
+    <message xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="GENERICROOT">
+        <Properties iib:parser="GENERICPROPERTYPARSER">
+            <MessageSet iib:valueType="CHARACTER">gen/version1.Salesforce_Request.response.schema.json</MessageSet>
+            <MessageType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <MessageFormat iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <Encoding iib:valueType="INTEGER">546</Encoding>
+            <CodedCharSetId iib:valueType="INTEGER">1208</CodedCharSetId>
+            <Transactional iib:valueType="BOOLEAN">FALSE</Transactional>
+            <Persistence iib:valueType="BOOLEAN">FALSE</Persistence>
+            <CreationTime iib:valueType="GMTTIMESTAMP">2026-03-18 07:02:36.464878</CreationTime>
+            <ExpirationTime iib:valueType="INTEGER">-1</ExpirationTime>
+            <Priority iib:valueType="INTEGER">0</Priority>
+            <ReplyIdentifier iib:valueType="BLOB"/>
+            <ReplyProtocol iib:valueType="CHARACTER">SOAP-HTTP</ReplyProtocol>
+            <Topic iib:elementType="0x03000000"/>
+            <ContentType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentitySourceType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentitySourceToken iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentitySourcePassword iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentitySourceIssuedBy iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentityMappedType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentityMappedToken iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentityMappedPassword iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentityMappedIssuedBy iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+        </Properties>
+        <JSON iib:parser="json">
+            <Data iib:elementType="0x01001000">
+                <Item>
+                    <Id iib:valueType="CHARACTER">001dL00001xfFIMQA2</Id>
+                    <IsDeleted iib:valueType="BOOLEAN">FALSE</IsDeleted>
+                    <Name iib:valueType="CHARACTER">Edge Communications</Name>
+                    <Type iib:valueType="CHARACTER">Customer - Direct</Type>
+                    <BillingStreet iib:valueType="CHARACTER">312 Constitution Place
+Austin, TX 78767
+USA</BillingStreet>
+                    <BillingCity iib:valueType="CHARACTER">Austin</BillingCity>
+                    <BillingState iib:valueType="CHARACTER">TX</BillingState>
+                    <BillingCountry iib:valueType="CHARACTER">United States</BillingCountry>
+                    <BillingStateCode iib:valueType="CHARACTER">TX</BillingStateCode>
+                    <BillingCountryCode iib:valueType="CHARACTER">US</BillingCountryCode>
+                    <ShippingStreet iib:valueType="CHARACTER">312 Constitution Place
+Austin, TX 78767
+USA</ShippingStreet>
+                    <Phone iib:valueType="CHARACTER">(512) 757-6000</Phone>
+                    <Fax iib:valueType="CHARACTER">(512) 757-9000</Fax>
+                    <AccountNumber iib:valueType="CHARACTER">CD451796</AccountNumber>
+                    <Website iib:valueType="CHARACTER">http://edgecomm.com</Website>
+                    <PhotoUrl iib:valueType="CHARACTER">/services/images/photo/001dL00001xfFIMQA2</PhotoUrl>
+                    <Sic iib:valueType="CHARACTER">6576</Sic>
+                    <Industry iib:valueType="CHARACTER">Electronics</Industry>
+                    <AnnualRevenue iib:valueType="INTEGER">139000000</AnnualRevenue>
+                    <NumberOfEmployees iib:valueType="INTEGER">1000</NumberOfEmployees>
+                    <Ownership iib:valueType="CHARACTER">Public</Ownership>
+                    <TickerSymbol iib:valueType="CHARACTER">EDGE</TickerSymbol>
+                    <Description iib:valueType="CHARACTER">Edge, founded in 1998, is a start-up based in Austin, TX. The company designs and manufactures a device to convert music from one digital format to another. Edge sells its product through retailers and its own website.</Description>
+                    <Rating iib:valueType="CHARACTER">Hot</Rating>
+                    <OwnerId iib:valueType="CHARACTER">005dL00001iRn1BQAS</OwnerId>
+                    <CreatedDate iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</CreatedDate>
+                    <CreatedById iib:valueType="CHARACTER">005dL00001iRn1BQAS</CreatedById>
+                    <LastModifiedDate iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</LastModifiedDate>
+                    <LastModifiedById iib:valueType="CHARACTER">005dL00001iRn1BQAS</LastModifiedById>
+                    <SystemModstamp iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</SystemModstamp>
+                    <CleanStatus iib:valueType="CHARACTER">Pending</CleanStatus>
+                    <CustomerPriority__c iib:valueType="CHARACTER">Medium</CustomerPriority__c>
+                    <SLA__c iib:valueType="CHARACTER">Silver</SLA__c>
+                    <Active__c iib:valueType="CHARACTER">Yes</Active__c>
+                    <NumberofLocations__c iib:valueType="INTEGER">2</NumberofLocations__c>
+                    <UpsellOpportunity__c iib:valueType="CHARACTER">Maybe</UpsellOpportunity__c>
+                    <SLASerialNumber__c iib:valueType="CHARACTER">2657</SLASerialNumber__c>
+                    <SLAExpirationDate__c iib:valueType="CHARACTER">2026-04-02</SLAExpirationDate__c>
+                    <attributes>
+                        <type iib:valueType="CHARACTER">Account</type>
+                        <url iib:valueType="CHARACTER">/services/data/v54.0/sobjects/Account/001dL00001xfFIMQA2</url>
+                    </attributes>
+                </Item>
+                <Item>
+                    <Id iib:valueType="CHARACTER">001dL00001xfFINQA2</Id>
+                    <IsDeleted iib:valueType="BOOLEAN">FALSE</IsDeleted>
+                    <Name iib:valueType="CHARACTER">Burlington Textiles Corp of America</Name>
+                    <Type iib:valueType="CHARACTER">Customer - Direct</Type>
+                    <BillingStreet iib:valueType="CHARACTER">525 S. Lexington Ave</BillingStreet>
+                    <BillingCity iib:valueType="CHARACTER">Burlington</BillingCity>
+                    <BillingState iib:valueType="CHARACTER">NC</BillingState>
+                    <BillingPostalCode iib:valueType="CHARACTER">27215</BillingPostalCode>
+                    <BillingCountry iib:valueType="CHARACTER">USA</BillingCountry>
+                    <BillingStateCode iib:valueType="CHARACTER">NC</BillingStateCode>
+                    <BillingCountryCode iib:valueType="CHARACTER">US</BillingCountryCode>
+                    <Phone iib:valueType="CHARACTER">(336) 222-7000</Phone>
+                    <Fax iib:valueType="CHARACTER">(336) 222-8000</Fax>
+                    <AccountNumber iib:valueType="CHARACTER">CD656092</AccountNumber>
+                    <Website iib:valueType="CHARACTER">www.burlington.com</Website>
+                    <PhotoUrl iib:valueType="CHARACTER">/services/images/photo/001dL00001xfFINQA2</PhotoUrl>
+                    <Sic iib:valueType="CHARACTER">546732</Sic>
+                    <Industry iib:valueType="CHARACTER">Apparel</Industry>
+                    <AnnualRevenue iib:valueType="INTEGER">350000000</AnnualRevenue>
+                    <NumberOfEmployees iib:valueType="INTEGER">9000</NumberOfEmployees>
+                    <Ownership iib:valueType="CHARACTER">Public</Ownership>
+                    <TickerSymbol iib:valueType="CHARACTER">BTXT</TickerSymbol>
+                    <Rating iib:valueType="CHARACTER">Warm</Rating>
+                    <OwnerId iib:valueType="CHARACTER">005dL00001iRn1BQAS</OwnerId>
+                    <CreatedDate iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</CreatedDate>
+                    <CreatedById iib:valueType="CHARACTER">005dL00001iRn1BQAS</CreatedById>
+                    <LastModifiedDate iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</LastModifiedDate>
+                    <LastModifiedById iib:valueType="CHARACTER">005dL00001iRn1BQAS</LastModifiedById>
+                    <SystemModstamp iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</SystemModstamp>
+                    <CleanStatus iib:valueType="CHARACTER">Pending</CleanStatus>
+                    <SLA__c iib:valueType="CHARACTER">Silver</SLA__c>
+                    <NumberofLocations__c iib:valueType="INTEGER">6</NumberofLocations__c>
+                    <UpsellOpportunity__c iib:valueType="CHARACTER">Maybe</UpsellOpportunity__c>
+                    <SLASerialNumber__c iib:valueType="CHARACTER">5367</SLASerialNumber__c>
+                    <SLAExpirationDate__c iib:valueType="CHARACTER">2026-04-02</SLAExpirationDate__c>
+                    <attributes>
+                        <type iib:valueType="CHARACTER">Account</type>
+                        <url iib:valueType="CHARACTER">/services/data/v54.0/sobjects/Account/001dL00001xfFINQA2</url>
+                    </attributes>
+                </Item>
+                <Item>
+                    <Id iib:valueType="CHARACTER">001dL00001xfFIOQA2</Id>
+                    <IsDeleted iib:valueType="BOOLEAN">FALSE</IsDeleted>
+                    <Name iib:valueType="CHARACTER">Pyramid Construction Inc.</Name>
+                    <Type iib:valueType="CHARACTER">Customer - Channel</Type>
+                    <BillingStreet iib:valueType="CHARACTER">2 Place Jussieu</BillingStreet>
+                    <BillingCity iib:valueType="CHARACTER">Paris</BillingCity>
+                    <BillingPostalCode iib:valueType="CHARACTER">75251</BillingPostalCode>
+                    <BillingCountry iib:valueType="CHARACTER">France</BillingCountry>
+                    <BillingCountryCode iib:valueType="CHARACTER">FR</BillingCountryCode>
+                    <ShippingStreet iib:valueType="CHARACTER">2 Place Jussieu</ShippingStreet>
+                    <ShippingCity iib:valueType="CHARACTER">Paris</ShippingCity>
+                    <ShippingPostalCode iib:valueType="CHARACTER">75251</ShippingPostalCode>
+                    <ShippingCountry iib:valueType="CHARACTER">France</ShippingCountry>
+                    <ShippingCountryCode iib:valueType="CHARACTER">FR</ShippingCountryCode>
+                    <Phone iib:valueType="CHARACTER">(014) 427-4427</Phone>
+                    <Fax iib:valueType="CHARACTER">(014) 427-4428</Fax>
+                    <AccountNumber iib:valueType="CHARACTER">CC213425</AccountNumber>
+                    <Website iib:valueType="CHARACTER">www.pyramid.com</Website>
+                    <PhotoUrl iib:valueType="CHARACTER">/services/images/photo/001dL00001xfFIOQA2</PhotoUrl>
+                    <Sic iib:valueType="CHARACTER">4253</Sic>
+                    <Industry iib:valueType="CHARACTER">Construction</Industry>
+                    <AnnualRevenue iib:valueType="INTEGER">950000000</AnnualRevenue>
+                    <NumberOfEmployees iib:valueType="INTEGER">2680</NumberOfEmployees>
+                    <Ownership iib:valueType="CHARACTER">Public</Ownership>
+                    <TickerSymbol iib:valueType="CHARACTER">PYR</TickerSymbol>
+                    <OwnerId iib:valueType="CHARACTER">005dL00001iRn1BQAS</OwnerId>
+                    <CreatedDate iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</CreatedDate>
+                    <CreatedById iib:valueType="CHARACTER">005dL00001iRn1BQAS</CreatedById>
+                    <LastModifiedDate iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</LastModifiedDate>
+                    <LastModifiedById iib:valueType="CHARACTER">005dL00001iRn1BQAS</LastModifiedById>
+                    <SystemModstamp iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</SystemModstamp>
+                    <CleanStatus iib:valueType="CHARACTER">Pending</CleanStatus>
+                    <SLA__c iib:valueType="CHARACTER">Silver</SLA__c>
+                    <Active__c iib:valueType="CHARACTER">Yes</Active__c>
+                    <NumberofLocations__c iib:valueType="INTEGER">17</NumberofLocations__c>
+                    <UpsellOpportunity__c iib:valueType="CHARACTER">Maybe</UpsellOpportunity__c>
+                    <SLASerialNumber__c iib:valueType="CHARACTER">9840</SLASerialNumber__c>
+                    <SLAExpirationDate__c iib:valueType="CHARACTER">2026-10-03</SLAExpirationDate__c>
+                    <attributes>
+                        <type iib:valueType="CHARACTER">Account</type>
+                        <url iib:valueType="CHARACTER">/services/data/v54.0/sobjects/Account/001dL00001xfFIOQA2</url>
+                    </attributes>
+                </Item>
+                <Item>
+                    <Id iib:valueType="CHARACTER">001dL00001xfFIPQA2</Id>
+                    <IsDeleted iib:valueType="BOOLEAN">FALSE</IsDeleted>
+                    <Name iib:valueType="CHARACTER">Dickenson plc</Name>
+                    <Type iib:valueType="CHARACTER">Customer - Channel</Type>
+                    <BillingStreet iib:valueType="CHARACTER">1301 Hoch Drive</BillingStreet>
+                    <BillingCity iib:valueType="CHARACTER">Lawrence</BillingCity>
+                    <BillingState iib:valueType="CHARACTER">KS</BillingState>
+                    <BillingPostalCode iib:valueType="CHARACTER">66045</BillingPostalCode>
+                    <BillingCountry iib:valueType="CHARACTER">USA</BillingCountry>
+                    <BillingStateCode iib:valueType="CHARACTER">KS</BillingStateCode>
+                    <BillingCountryCode iib:valueType="CHARACTER">US</BillingCountryCode>
+                    <ShippingStreet iib:valueType="CHARACTER">1301 Hoch Drive</ShippingStreet>
+                    <ShippingCity iib:valueType="CHARACTER">Lawrence</ShippingCity>
+                    <ShippingState iib:valueType="CHARACTER">KS</ShippingState>
+                    <ShippingPostalCode iib:valueType="CHARACTER">66045</ShippingPostalCode>
+                    <ShippingCountry iib:valueType="CHARACTER">USA</ShippingCountry>
+                    <ShippingStateCode iib:valueType="CHARACTER">KS</ShippingStateCode>
+                    <ShippingCountryCode iib:valueType="CHARACTER">US</ShippingCountryCode>
+                    <Phone iib:valueType="CHARACTER">(785) 241-6200</Phone>
+                    <Fax iib:valueType="CHARACTER">(785) 241-6201</Fax>
+                    <AccountNumber iib:valueType="CHARACTER">CC634267</AccountNumber>
+                    <Website iib:valueType="CHARACTER">dickenson-consulting.com</Website>
+                    <PhotoUrl iib:valueType="CHARACTER">/services/images/photo/001dL00001xfFIPQA2</PhotoUrl>
+                    <Sic iib:valueType="CHARACTER">6752</Sic>
+                    <Industry iib:valueType="CHARACTER">Consulting</Industry>
+                    <AnnualRevenue iib:valueType="INTEGER">50000000</AnnualRevenue>
+                    <NumberOfEmployees iib:valueType="INTEGER">120</NumberOfEmployees>
+                    <Ownership iib:valueType="CHARACTER">Private</Ownership>
+                    <OwnerId iib:valueType="CHARACTER">005dL00001iRn1BQAS</OwnerId>
+                    <CreatedDate iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</CreatedDate>
+                    <CreatedById iib:valueType="CHARACTER">005dL00001iRn1BQAS</CreatedById>
+                    <LastModifiedDate iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</LastModifiedDate>
+                    <LastModifiedById iib:valueType="CHARACTER">005dL00001iRn1BQAS</LastModifiedById>
+                    <SystemModstamp iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</SystemModstamp>
+                    <CleanStatus iib:valueType="CHARACTER">Pending</CleanStatus>
+                    <CustomerPriority__c iib:valueType="CHARACTER">Low</CustomerPriority__c>
+                    <SLA__c iib:valueType="CHARACTER">Bronze</SLA__c>
+                    <Active__c iib:valueType="CHARACTER">Yes</Active__c>
+                    <NumberofLocations__c iib:valueType="INTEGER">2</NumberofLocations__c>
+                    <UpsellOpportunity__c iib:valueType="CHARACTER">No</UpsellOpportunity__c>
+                    <SLASerialNumber__c iib:valueType="CHARACTER">7425</SLASerialNumber__c>
+                    <SLAExpirationDate__c iib:valueType="CHARACTER">2026-10-03</SLAExpirationDate__c>
+                    <attributes>
+                        <type iib:valueType="CHARACTER">Account</type>
+                        <url iib:valueType="CHARACTER">/services/data/v54.0/sobjects/Account/001dL00001xfFIPQA2</url>
+                    </attributes>
+                </Item>
+                <Item>
+                    <Id iib:valueType="CHARACTER">001dL00001xfFIQQA2</Id>
+                    <IsDeleted iib:valueType="BOOLEAN">FALSE</IsDeleted>
+                    <Name iib:valueType="CHARACTER">Grand Hotels &amp; Resorts Ltd</Name>
+                    <Type iib:valueType="CHARACTER">Customer - Direct</Type>
+                    <BillingStreet iib:valueType="CHARACTER">2334 N. Michigan Avenue, Suite 1500
+Chicago, IL 60601, USA</BillingStreet>
+                    <BillingCity iib:valueType="CHARACTER">Chicago</BillingCity>
+                    <BillingState iib:valueType="CHARACTER">IL</BillingState>
+                    <BillingCountry iib:valueType="CHARACTER">United States</BillingCountry>
+                    <BillingStateCode iib:valueType="CHARACTER">IL</BillingStateCode>
+                    <BillingCountryCode iib:valueType="CHARACTER">US</BillingCountryCode>
+                    <ShippingStreet iib:valueType="CHARACTER">2334 N. Michigan Avenue, Suite 1500
+Chicago, IL 60601, USA</ShippingStreet>
+                    <Phone iib:valueType="CHARACTER">(312) 596-1000</Phone>
+                    <Fax iib:valueType="CHARACTER">(312) 596-1500</Fax>
+                    <AccountNumber iib:valueType="CHARACTER">CD439877</AccountNumber>
+                    <Website iib:valueType="CHARACTER">www.grandhotels.com</Website>
+                    <PhotoUrl iib:valueType="CHARACTER">/services/images/photo/001dL00001xfFIQQA2</PhotoUrl>
+                    <Sic iib:valueType="CHARACTER">2268</Sic>
+                    <Industry iib:valueType="CHARACTER">Hospitality</Industry>
+                    <AnnualRevenue iib:valueType="INTEGER">500000000</AnnualRevenue>
+                    <NumberOfEmployees iib:valueType="INTEGER">5600</NumberOfEmployees>
+                    <Ownership iib:valueType="CHARACTER">Public</Ownership>
+                    <TickerSymbol iib:valueType="CHARACTER">GHTL</TickerSymbol>
+                    <Description iib:valueType="CHARACTER">Chain of hotels and resorts across the US, UK, Eastern Europe, Japan, and SE Asia.</Description>
+                    <Rating iib:valueType="CHARACTER">Warm</Rating>
+                    <OwnerId iib:valueType="CHARACTER">005dL00001iRn1BQAS</OwnerId>
+                    <CreatedDate iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</CreatedDate>
+                    <CreatedById iib:valueType="CHARACTER">005dL00001iRn1BQAS</CreatedById>
+                    <LastModifiedDate iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</LastModifiedDate>
+                    <LastModifiedById iib:valueType="CHARACTER">005dL00001iRn1BQAS</LastModifiedById>
+                    <SystemModstamp iib:valueType="CHARACTER">2026-03-10T08:57:03.000+0000</SystemModstamp>
+                    <CleanStatus iib:valueType="CHARACTER">Pending</CleanStatus>
+                    <CustomerPriority__c iib:valueType="CHARACTER">High</CustomerPriority__c>
+                    <SLA__c iib:valueType="CHARACTER">Gold</SLA__c>
+                    <Active__c iib:valueType="CHARACTER">Yes</Active__c>
+                    <NumberofLocations__c iib:valueType="INTEGER">57</NumberofLocations__c>
+                    <UpsellOpportunity__c iib:valueType="CHARACTER">Yes</UpsellOpportunity__c>
+                    <SLASerialNumber__c iib:valueType="CHARACTER">5572</SLASerialNumber__c>
+                    <SLAExpirationDate__c iib:valueType="CHARACTER">2026-10-03</SLAExpirationDate__c>
+                    <attributes>
+                        <type iib:valueType="CHARACTER">Account</type>
+                        <url iib:valueType="CHARACTER">/services/data/v54.0/sobjects/Account/001dL00001xfFIQQA2</url>
+                    </attributes>
+                </Item>
+            </Data>
+        </JSON>
+    </message>
+</MessageAssembly>

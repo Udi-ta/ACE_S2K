@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmApplicationConnectorRequest_salesforce.msgnode="ComIbmApplicationConnectorRequest_salesforce.msgnode" xmlns:ComIbmJSONataMapping.msgnode="ComIbmJSONataMapping.msgnode" xmlns:ComIbmKafkaMsgProducer.msgnode="ComIbmKafkaMsgProducer.msgnode" xmlns:ComIbmWSInput.msgnode="ComIbmWSInput.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility"
+    nsURI="version1.msgflow" nsPrefix="version1.msgflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" nodeLayoutStyle="RECTANGLE">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <translation xmi:type="utility:TranslatableString" key="version1" bundleName="version1" pluginId="s2k"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/s2k/icons/full/obj16/version1.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/s2k/icons/full/obj30/version1.gif"/>
+    <composition>
+      <nodes xmi:type="ComIbmApplicationConnectorRequest_salesforce.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="218,112" applicationConnectorType="salesforce" action="RETRIEVEALL" businessObject="Account" displayName="Retrieve accounts" schemaPrefix="gen/version1.Salesforce_Request" policyUrl="{salesforcePolicy}:Salesforce 1" mappingMode="jsonmap" messageSetProperty="gen/version1.Salesforce_Request.response.schema.json">
+        <filter>
+          <queryProperties limit="5"/>
+        </filter>
+        <translation xmi:type="utility:ConstantString" string="Salesforce Request"/>
+        <connectorServiceOptions optionName="httpMethod" optionValue="get"/>
+        <connectorServiceOptions optionName="path" optionValue="resources/Account"/>
+        <connectorServiceOptions optionName="action" optionValue="retrievewithwhere"/>
+      </nodes>
+      <nodes xmi:type="ComIbmKafkaMsgProducer.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="632,128" topicName="ace-kafka-udita" bootstrapServers="this property will be overridden by policy" policyUrl="{kafkaPolicy}:kafka" schemaRegistryPolicyUrl="{kafkaPolicy}:kafka">
+        <translation xmi:type="utility:ConstantString" string="Kafka Producer"/>
+      </nodes>
+      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="33,83" URLSpecifier="/bschlrha">
+        <translation xmi:type="utility:ConstantString" string="HTTP Input"/>
+      </nodes>
+      <nodes xmi:type="ComIbmJSONataMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="433,197" schemaPrefix="gen/version1.JSONata_Mapping" messageSetProperty="gen/version1.JSONata_Mapping.response.schema.json">
+        <translation xmi:type="utility:ConstantString" string="JSONata Mapping"/>
+        <contextReference nodeName="Salesforce Request" nodeType="ComIbmApplicationConnectorRequest_salesforce.msgnode" nodeProps="" terminalName="OutTerminal.out" messageDomain="JSON" schemaLocation="gen/version1.Salesforce_Request.response.schema.json" schemaRoot="" resultDataLocation="$ResultRoot" flowName=""/>
+        <requestMap map="{&quot;customSchemas&quot;:{&quot;properties.`Data`&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;name&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;department&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;phone&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;number&quot;}}}}},&quot;$map&quot;:&quot;http://ibm.com/appconnect/map/v1&quot;,&quot;input&quot;:[{&quot;variable&quot;:&quot;context_2f6e6f64654e616d652f53616c6573666f7263652052657175657374&quot;,&quot;$ref&quot;:&quot;#/contextReferences/context_2f6e6f64654e616d652f53616c6573666f7263652052657175657374&quot;},{&quot;variable&quot;:&quot;context_2f6e6f64654e616d652f4854545020496e707574&quot;,&quot;$ref&quot;:&quot;#/contextReferences/context_2f6e6f64654e616d652f4854545020496e707574&quot;},{&quot;variable&quot;:&quot;FlowDetails&quot;,&quot;$ref&quot;:&quot;#/FlowDetails&quot;},{&quot;variable&quot;:&quot;InvocationDetails&quot;,&quot;$ref&quot;:&quot;#/InvocationDetails&quot;}],&quot;mappings&quot;:[{&quot;Data&quot;:{&quot;mappings&quot;:[{&quot;department&quot;:{&quot;expression&quot;:&quot;$context_2f6e6f64654e616d652f53616c6573666f7263652052657175657374.Payload.Data.Type &quot;}},{&quot;name&quot;:{&quot;expression&quot;:&quot;$context_2f6e6f64654e616d652f53616c6573666f7263652052657175657374.Payload.Data.Name &quot;}},{&quot;phone&quot;:{&quot;expression&quot;:&quot;$context_2f6e6f64654e616d652f53616c6573666f7263652052657175657374.Payload.Data.Phone &quot;}}]}}]}"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_5" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_8" targetNode="FCMComposite_1_6" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_9" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_6" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+    </composition>
+    <propertyOrganizer/>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>
